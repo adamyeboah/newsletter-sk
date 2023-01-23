@@ -2,17 +2,6 @@
 <!--  Last Published: Sat Jan 14 2023 15:20:19 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="63c04c26a66e95f1be65fa82" data-wf-site="63c04c26a66e95171f65fa81">
 <head>
-  <!-- GetResponse Analytics -->
-  <script type="text/javascript">
-      
-  (function(m, o, n, t, e, r, _){
-          m['__GetResponseAnalyticsObject'] = e;m[e] = m[e] || function() {(m[e].q = m[e].q || []).push(arguments)};
-          r = o.createElement(n);_ = o.getElementsByTagName(n)[0];r.async = 1;r.src = t;r.setAttribute('crossorigin', 'use-credentials');_.parentNode .insertBefore(r, _);
-      })(window, document, 'script', 'https://ga.getresponse.com/script/cf371f88-86bf-4645-96e7-1c05acc6343f/ga.js', 'GrTracking');
-
-
-  </script>
-  <!-- End GetResponse Analytics -->
   <meta charset="utf-8">
   <title>TRW Signup</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -34,7 +23,6 @@
 </style>
 </head>
 <body>
-  <getresponse-form form-id="10af40e5-04f1-4758-b1e3-5cf266b4b57f" e="1"></getresponse-form>
   <section id="choice" class="primary-section wf-section">
     <div class="primary-container padding-top">
       <div class="div-block-51">
@@ -45,17 +33,17 @@
           <p><strong>From the man they try so hard to silence.</strong></p>
         </div>
         <div class="form-block w-form">
-          <form id="_form_1_" name="email-form" data-name="Email Form" action="https://app.convertkit.com/forms/4787838/subscriptions" method="post" class="form">
+          <form id="_form_1_" name="email-form" data-name="Email Form" action="https://app.getresponse.com/add_subscriber.html" method="post" class="form">
             <div class="w-embed">
               <!--Hidden Inputs-->
-              <input type="hidden" name="u" value="1" />
-              <input type="hidden" name="f" value="1" />
-              <input type="hidden" name="s" />
-              <input type="hidden" name="c" value="0" />
-              <input type="hidden" name="m" value="0" />
-              <input type="hidden" name="act" value="sub" />
-              <input type="hidden" name="v" value="2" />
-              <input type="hidden" name="or" value="3bbb37bda51f0745c94bd298188b0596" />
+              	<!-- List token -->
+	<!-- Get the token at: https://app.getresponse.com/campaign_list.html -->
+	<input type="hidden" name="campaign_token" value="qDcRc" />
+	<!-- Thank you page (optional) -->
+	<input type="hidden" name="thankyou_url" value=""/>
+	<!-- Add subscriber to the follow-up sequence with a specified day (optional) -->
+	<input type="hidden" name="start_day" value="0" />
+	<!-- Subscriber button -->
               <!----------------->
             </div>
             <label for="email" class="field-label">Email Address</label>
