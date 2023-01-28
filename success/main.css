@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url("./img/background.png") center/cover no-repeat fixed;
+    font-family: "Montserrat", sans-serif;
+    padding: 48px 0;
+}
+
+.inner {
+    width: 100vw;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p {
+    display: block;
+    text-align: center;
+}
+
+.style1 {
+    text-align: center;
+    color: #000000;
+    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+        "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1.375em;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0.75rem 0;
+}
+
+.image {
+    display: block;
+    line-height: 0;
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+.image:not(#image01):not(.style1) img {
+    width: 280px;
+    height: auto;
+}
+
+#image01 img {
+    width: 100%;
+    max-width: 570px;
+    margin: 0 auto;
+}
+
+p.style1 span.p:nth-child(n + 2) {
+    margin-top: 1rem;
+}
+
+#text01 {
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.625em;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.image.style1 img {
+    width: 10rem;
+    transition: none;
+    transition: 0.3s ease-in-out;
+}
+
+.image.style1 img:hover {
+    opacity: 0.65;
+}
+
+.countdown {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.countdown > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-num {
+    color: #ffae00;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1em;
+    margin-bottom: 10px;
+}
+
+.countdown-text {
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.countdown-colon {
+    color: #000;
+    font-size: 1.875rem;
+    margin: 6.5px 20px 0 20px;
+}
+
+#image-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#image-modal.show {
+    display: block;
+}
+
+.image-modal-backdrop {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image-modal-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 90vw;
+    height: auto;
+    max-width: 600px;
+}
+
+.image-modal-close {
+    background: none;
+    position: absolute;
+    z-index: 3;
+    border: 0;
+    right: 5vw;
+    top: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.image-modal-close:hover {
+    opacity: 0.65;
+}
+
+body.noscroll {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-grid-img {
+    cursor: pointer;
+    height: 200px;
+    width: auto;
+}
+.accordion {
+    width: 95vw;
+    max-width: 600px;
+    background: #161616;
+    border-radius: 0.5rem;
+    padding: 2rem 1rem;
+    margin: 60px auto 0 auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.accordion-item:not(.active) .accordion-body {
+    display: none;
+}
+
+.accordion-body {
+    height: fit-content;
+    display: block;
+}
+
+.accordion-caret {
+    background-image: linear-gradient(
+        to top right,
+        transparent 50%,
+        #ffae00 50%
+    );
+    width: 0.5rem;
+    height: 0.5rem;
+    transform: rotate(135deg);
+}
+
+.accordion-item.active .accordion-caret {
+    transform: rotate(-45deg);
+}
+
+.accordion-header > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.accordion-header > a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.accordion-body span {
+    color: #fff;
+    padding: 10px;
+    display: block;
+    line-height: 1.65em;
+}
+
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 26px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .countdown {
+        transform: scale(0.75);
+    }
+}
