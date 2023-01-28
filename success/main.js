@@ -5,10 +5,12 @@ if (time) {
 }
 
 const generateTime = () => {
-    const hoursToAdd = Math.random() * (70 - 30) + 30;
 
     const date = new Date();
-    date.setHours(date.getHours() + hoursToAdd);
+    date.setHours(date.getHours() + 21);
+    date.setMinutes(date.getMinutes() + 38);
+    date.setSeconds(date.getSeconds() + 42);
+                 
 
     time = date;
     localStorage.setItem("countdown-time", date);
